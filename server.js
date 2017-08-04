@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 
-
+// home route
+app.get('/', (req, res)=>{
+    res.render('index.ejs');
+});
 
 
 
