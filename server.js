@@ -17,6 +17,10 @@ app.get('/', (req, res)=>{
 const crewController = require('./controllers/crew.js');
 app.use('/crew', crewController);
 
+// use breweries controllers
+const breweriesController = require('./controllers/breweries.js');
+app.use('/breweries', breweriesController);
+
 // mongoose connection
 mongoose.connect('mongodb://localhost:27017/brewdex');
 mongoose.connection.once('open', ()=>{
