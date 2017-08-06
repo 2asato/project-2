@@ -23,4 +23,13 @@ router.post('/', (req, res)=>{
     });
 });
 
+// brewery show route
+router.get('/:id', (req, res)=>{
+    Breweries.findById(req.params.id, (err, foundBrewery)=>{
+        res.render('breweries/show.ejs', {
+            breweries: foundBrewery
+        });
+    });
+});
+
 module.exports = router;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <header>
+          <h1><%= breweries.name %></h1>
+          <nav>
+              <ul>
+                  <li>
+                      <a href="/">Home</a>
+                  </li>
+                  <li>
+                      <a href="/breweries">Brewdex</a>
+                  </li>
+              </ul>
+          </nav>
+      </header>
+      <main>
+          <section>
+              <ul>
+                  <li>
+                      <img src="<%= breweries.pic %>" heigth="300" width="300"/>
+                  </li>
+                  <li>
+                      <h3>Website:</h3>
+                      <a href="<%= breweries.website %>"><%= breweries.website %></a>
+                  </li>
+                  <li>
+                      <h3>Phone #:</h3>
+                      <%= breweries.phone %>
+                  </li>
+                  <li>
+                      <h3>Hours:</h3>
+                      <%= breweries.hours %>
+                  </li>
+                  <li>
+                      <h3>Food:</h3>
+                      <%= breweries.food %>
+                  </li>
+                  <li>
+                      <h3>Kids Allowed:</h3>
+                      <%= breweries.kids %>
+                  </li>
+                  <li>
+                      <h3>Accepts CC:</h3>
+                      <%= breweries.cc%>
+                  </li>
+                  <li>
+                      <h3>Outdoor Seating:</h3>
+                      <%= breweries.outdoor %>
+                  </li>
+              </ul>
+          </section>
+      </main>
+  </body>
+</html>
