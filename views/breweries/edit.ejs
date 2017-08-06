@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <header>
+          <h1>Edit Brewery</h1>
+          <h2><%= breweries.name %></h2>
+          <nav>
+              <ul>
+                  <li>
+                      <a href="/">Home</a>
+                  </li>
+                  <li>
+                      <a href="/breweries">Brewdex</a>
+                  </li>
+              </ul>
+          </nav>
+      </header>
+      <main>
+        <form action="/breweries" method="POST">
+            Brewery Name: <input type="text" name="name" value="<%= breweries.name %>"/><br/>
+            Brewery Pic: <input type="text" name="brewery_pic" value="<%= breweries.pic %>"/><br/>
+            Website: <input type="text" name="website" value="<%= breweries.website %>"/><br/>
+            Phone #: <input type="text" name="phone" value="<%= breweries.phone %>"/><br/>
+            Hours: <input type="text" name="hours" value="<%= breweries.hours %>"/><br/>
+            Food: <input type="text" name="food" value="<%= breweries.food %>"/><br/>
+            Kids Allowed: <input type="text" name="kids" value="<%= breweries.kids %>"/><br/>
+            Accepts CC: <input type="text" name="cc" value="<%= breweries.cc %>"/><br/>
+            Outdor Seating: <input type="text" name="outdoor" value="<%= breweries.outdoor %>"/><br/>
+            <input type="submit" name="" value="Add to Brewdex">
+      </main>
+  </body>
+</html>
