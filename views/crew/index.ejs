@@ -18,5 +18,15 @@
               </ul>
           </nav>
       </header>
+      <main>
+          <h2>Brew Crew</h2>
+          <ul>
+              <% for (let i = 0; i < crew.length; i++) { %>
+                  <li>
+                      <a href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a>
+                  </li>
+              <% } %>
+          </ul>
+      </main>
   </body>
 </html>

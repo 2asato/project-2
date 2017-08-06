@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+// middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // home route
 app.get('/', (req, res)=>{
