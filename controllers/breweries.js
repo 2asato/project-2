@@ -12,7 +12,7 @@ router.delete('/:id', (req, res)=>{
 // edit brewery route
 router.get('/:id/edit', (req, res)=>{
     Breweries.findById(req.params.id, (err, foundBrewery)=>{
-        res.render('breweries'/edit.ejs, {
+        res.render('breweries/edit.ejs', {
             breweries: foundBrewery
         });
     });

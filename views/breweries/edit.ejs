@@ -20,7 +20,7 @@
           </nav>
       </header>
       <main>
-        <form action="/breweries" method="POST">
+        <form action="/breweries/<%= breweries._id %>?_method=PUT" method="POST">
             Brewery Name: <input type="text" name="name" value="<%= breweries.name %>"/><br/>
             Brewery Pic: <input type="text" name="brewery_pic" value="<%= breweries.pic %>"/><br/>
             Website: <input type="text" name="website" value="<%= breweries.website %>"/><br/>
