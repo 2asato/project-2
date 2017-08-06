@@ -2,6 +2,13 @@ const express = require('express');
 const router = express.Router();
 const Crew = require('../models/crew.js');
 
+// delete route
+router.delete('/:id', (req, res)=>{
+    Crew.findByIdAndRemove(req.params.id, ()=>{
+        res.redirect('/crew');
+    });
+});
+
 // crew route
 router.get('/', (req, res)=>{
   // res.send('hello');
