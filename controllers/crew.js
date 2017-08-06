@@ -9,6 +9,22 @@ router.delete('/:id', (req, res)=>{
     });
 });
 
+// edit route
+router.get('/:id/edit', (req, res)=>{
+    Crew.findById(req.params.id, (err, foundCrew)=>{
+        res.render('crew/edit.ejs', {
+            crew: foundCrew
+        });
+    });
+});
+
+// put route
+router.put('/:id', (req, res)=>{
+    Crew.findByIdAndUpdate(req.params.id, req.body, ()=>{
+        res.redirect('/crew/');
+    });
+});
+
 // crew route
 router.get('/', (req, res)=>{
   // res.send('hello');
