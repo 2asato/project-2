@@ -6,7 +6,7 @@
   </head>
   <body>
       <header>
-          <h1>Breweries</h1>
+          <h1>Brewdex</h1>
           <nav>
               <ul>
                   <li>
@@ -18,5 +18,15 @@
               </ul>
           </nav>
       </header>
+      <main>
+          <h2>List of Breweries</h2>
+          <ul>
+              <% for (let i = 0; i < breweries.length; i++) { %>
+                <li>
+                    <a href="/breweries/<%= breweries[i]._id %>"><%= breweries[i].name %></a>
+                </li>
+              <% } %>
+          </ul>
+      </main>
   </body>
 </html>
