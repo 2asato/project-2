@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Breweries = require('../models/breweries.js');
+const Crew = require('../models/crew.js');
 
 // delete route
 router.delete('/:id', (req, res)=>{
@@ -36,22 +37,34 @@ router.get('/', (req, res)=>{
 
 // new brewery route
 router.get('/new', (req, res)=>{
-    res.render('breweries/new.ejs')
+    Crew.find({}, (err, allCrew)=>{
+      res.render('breweries/new.ejs', {
+        crew: allCrew
+      });
+    });
 });
 
 // brewery create route
 router.post('/', (req, res)=>{
-    Breweries.create(req.body, (err, createdBrewery)=>{
-        res.redirect('/breweries');
+    Crew.findById(req.body.crewId, (err, foundCrew)=>{
+      Breweries.create(req.body, (err, createdBrewery)=>{
+        foundCrew.breweries.push(createdBrewery);
+        foundCrew.save((err, data)=>{
+          res.redirect('/breweries');
+      });
     });
+  });
 });
 
 // brewery show route
 router.get('/:id', (req, res)=>{
     Breweries.findById(req.params.id, (err, foundBrewery)=>{
+      Crew.findOne({ 'breweries._id':req.params.id}, (err, foundCrew)=>{
         res.render('breweries/show.ejs', {
-            breweries: foundBrewery
+          crew: foundCrew,
+          breweries: foundBrewery
         });
+      });
     });
 });
 

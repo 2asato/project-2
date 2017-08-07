@@ -20,6 +20,11 @@
       </header>
       <main>
         <form action="/breweries" method="POST">
+          <select name="crewId">
+            <% for (let i = 0; i < crew.length; i++) { %>
+              <option value="<%= crew[i]._id %>"><%= crew[i].name %></option>
+            <% } %>
+          </select><br/>
             Brewery Name: <input type="text" name="name"/><br/>
             Brewery Pic: <input type="text" name="pic"/><br/>
             Website: <input type="text" name="website"/><br/>

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Breweries = require('./breweries.js');
 
 const crewSchema = mongoose.Schema({
     name: String,
@@ -6,6 +7,7 @@ const crewSchema = mongoose.Schema({
     fav_beer: String,
     fav_brewery: String,
     about: String,
+    breweries: [Breweries.schema],
 });
 
 const Crew = mongoose.model('Crew', crewSchema);
