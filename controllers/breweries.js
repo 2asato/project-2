@@ -6,7 +6,12 @@ const Crew = require('../models/crew.js');
 // delete route
 router.delete('/:id', (req, res)=>{
     Breweries.findByIdAndRemove(req.params.id, ()=>{
-        res.redirect('/breweries');
+      Crew.findOne({ 'breweries._id':req.params.id}, (err, foundCrew)=>{
+        foundCrew.breweries.id(req.params.id).remove();
+        foundCrew.save(( err, data )=>{
+          res.redirect('/breweries');
+        });
+      });
     });
 });
 
