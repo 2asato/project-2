@@ -26,8 +26,14 @@ router.get('/:id/edit', (req, res)=>{
 
 // edit put route
 router.put('/:id', (req, res)=>{
-    Breweries.findByIdAndUpdate(req.params.id, req.body, ()=>{
-        res.redirect('/breweries');
+    Breweries.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedBrewery)=>{
+      Crew.findOne({ 'breweries._id':req.params.id }, (err, foundCrew)=>{
+        foundCrew.breweries.id(req.params.id).remove();
+        foundCrew.breweries.push(updatedBrewery);
+        foundCrew.save((err, data)=>{
+          res.redirect('/breweries/'+req.params.id);
+        });
+      });
     });
 });
 
