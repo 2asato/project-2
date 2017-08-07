@@ -39,6 +39,16 @@
               </ul>
           </section>
           <section>
+              <h2>Breweries Posted:</h2>
+                  <ul>
+                      <% for (let i = 0; i < crew.breweries.length; i++) { %>
+                        <li>
+                            <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
+                        </li>
+                      <% } %>
+                  </ul>
+          </section>
+          <section>
               <a href="/crew/<%= crew._id %>/edit">Edit Profile</a>
           </section>
           <section>
