@@ -22,11 +22,16 @@ const breweriesController = require('./controllers/breweries.js');
 app.use('/breweries', breweriesController);
 
 // mongoose connection
-mongoose.connect('mongodb://localhost:27017/brewdex');
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/brewdex';
+
+mongoose.connect(mongoURi);
+
 mongoose.connection.once('open', ()=>{
     console.log('connected to mongo');
 });
 
-app.listen(3000, ()=>{
+const port = process.env.PORT || 3000;
+
+app.listen(port, ()=>{
     console.log('listening....');
 });
