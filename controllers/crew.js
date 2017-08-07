@@ -1,11 +1,25 @@
 const express = require('express');
 const router = express.Router();
 const Crew = require('../models/crew.js');
+const Breweries = require('../models/breweries.js');
 
 // delete route
 router.delete('/:id', (req, res)=>{
-    Crew.findByIdAndRemove(req.params.id, ()=>{
-        res.redirect('/crew');
+    Crew.findByIdAndRemove(req.params.id, (err, foundCrew)=>{
+      const breweriesIds = [];
+      for (let i = 0; i < foundCrew.breweries.length; i++) {
+        breweriesIds.push(foundCrew.breweries[i]._id);
+      }
+      Breweries.remove(
+        {
+          _id : {
+              $in: breweriesIds
+          }
+        },
+        (err, data)=>{
+          res.redirect('/crew');
+        }
+      );
     });
 });
 
