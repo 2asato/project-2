@@ -24,7 +24,7 @@ app.use('/breweries', breweriesController);
 // mongoose connection
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/brewdex';
 
-mongoose.connect(mongoURi);
+mongoose.connect(mongoUri);
 
 mongoose.connection.once('open', ()=>{
     console.log('connected to mongo');
