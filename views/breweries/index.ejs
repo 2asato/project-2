@@ -23,7 +23,10 @@
           <ul>
               <% for (let i = 0; i < breweries.length; i++) { %>
                 <li>
-                    <a href="/breweries/<%= breweries[i]._id %>"><%= breweries[i].name %></a>
+                    <a href="/breweries/<%= breweries[i]._id %>"><%= breweries[i].name %></a><br/>
+                    <a href="/breweries/<%= breweries[i]._id %>">
+                    <img src="<%= breweries[i].pic %>" height="300" width="300"><br/>
+                    </a>
                 </li>
               <% } %>
           </ul>
