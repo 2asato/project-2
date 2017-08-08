@@ -23,7 +23,10 @@
           <ul>
               <% for (let i = 0; i < crew.length; i++) { %>
                   <li>
-                      <a href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a>
+                      <a href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a><br/>
+                      <a href="/crew/<%= crew[i]._id %>">
+                      <img src="<%= crew[i].profile_pic %>" height="200" width="200"><br/>
+                      </a>
                   </li>
               <% } %>
           </ul>
