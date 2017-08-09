@@ -1,0 +1,31 @@
+header {
+  height: 200px;
+}
+
+#nav-title {
+  text-align: center;
+}
+
+#nav-ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-li {
+  display: block;
+  list-style: none;
+  flex: 0 1 auto;
+}
+
+#home-pic {
+  margin-top: -10%;
+  clear: both;
+}
+
+#home-main-img {
+  width: 100%;
+}

@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/head.ejs %>
   </head>
   <body>
+      <nav>
+          <% include ../partials/nav.ejs %>
+      </nav>
       <header>
           <h1>Edit Brewery</h1>
           <h2><%= breweries.name %></h2>
-          <nav>
-              <ul>
-                  <li>
-                      <a href="/">Home</a>
-                  </li>
-                  <li>
-                      <a href="/breweries">Brewdex</a>
-                  </li>
-              </ul>
-          </nav>
       </header>
       <main>
         <form action="/breweries/<%= breweries._id %>?_method=PUT" method="POST">

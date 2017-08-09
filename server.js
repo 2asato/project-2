@@ -8,6 +8,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
 
+app.use(express.static('public'));
+
 // home route
 app.get('/', (req, res)=>{
     res.render('index.ejs');

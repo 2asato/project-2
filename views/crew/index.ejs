@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <head>
+        <% include ../partials/head.ejs %>
+    </head>
   </head>
   <body>
-      <header>
-          <h1>Brew Crew</h1>
-          <nav>
-              <ul>
-                  <li>
-                      <a href="/">Home</a>
-                  </li>
-                  <li>
-                      <a href="/crew/new">Join the Crew</a>
-                  </li>
-              </ul>
-          </nav>
-      </header>
+      <nav>
+          <% include ../partials/nav.ejs %>
+      </nav>
       <main>
           <h2>Brew Crew</h2>
           <ul>
@@ -30,6 +21,7 @@
                   </li>
               <% } %>
           </ul>
+          <a href="/crew/new">Create a Profile</a>
       </main>
   </body>
 </html>

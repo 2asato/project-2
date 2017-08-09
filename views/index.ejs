@@ -1,22 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Brewdex</title>
+      <% include partials/head.ejs %>
   </head>
   <body>
-      <header>
-          <h1>Brewdex</h1>
-          <nav>
-              <ul>
-                  <li>
-                      <a href="/crew">Brew Crew</a>
-                  </li>
-                  <li>
-                      <a href="/breweries">Breweries</a>
-                  </li>
-              </ul>
-          </nav>
-      </header>
+      <nav>
+          <% include partials/nav.ejs %>
+      </nav>
+      <div id="home-pic">
+          <img id="home-main-img" src="https://static.seattletimes.com/wp-content/uploads/2017/03/581e3cf6-0e64-11e7-aafa-d88efb65a573-780x525.jpg" alt="">
+      </div>
   </body>
 </html>
