@@ -2,8 +2,10 @@ header {
   height: 200px;
 }
 
-#nav-title {
+.nav-title {
   text-align: center;
+  font-size: 36px;
+  margin-top: -10%;
 }
 
 #nav-ul {
@@ -22,10 +24,35 @@ header {
 }
 
 #home-pic {
-  margin-top: -10%;
+  margin-top: 5%;
   clear: both;
 }
 
 #home-main-img {
   width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  float: right;
+}
+
+.create-add {
+  text-align: center;
+}
+
+.row {
+  margin-top: 5%;
+}
+
+.center_div {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.bootstrap-iso {
+  margin-top: -15%;
 }

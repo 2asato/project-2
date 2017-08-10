@@ -7,11 +7,15 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
+      <h2 class="nav-title">Breweries</h2>
       <main>
-          <h2>List of Breweries</h2>
+        <div class="create-add">
+          <a href="/breweries/new">Add a Brewery</a>
+        </div>
+        <div class="row">
           <ul>
               <% for (let i = 0; i < breweries.length; i++) { %>
-                <li>
+                <li class="col-xs-4">
                     <a href="/breweries/<%= breweries[i]._id %>"><%= breweries[i].name %></a><br/>
                     <a href="/breweries/<%= breweries[i]._id %>">
                     <img src="<%= breweries[i].pic %>" height="200" width="200"><br/>
@@ -19,7 +23,7 @@
                 </li>
               <% } %>
           </ul>
-          <a href="/breweries/new">Add a Brewery</a>
+        </div>
       </main>
   </body>
 </html>

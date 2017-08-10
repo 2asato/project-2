@@ -10,14 +10,13 @@
           <% include ../partials/nav.ejs %>
       </nav>
       <header>
-          <h1><%= crew.name %></h1>
+          <h1 class="nav-title"><%= crew.name %></h1>
       </header>
       <main>
-          <section>
+        <img src="<%= crew.profile_pic %>" height="300" width="300"/>
+
+          <div>
               <ul>
-                  <li>
-                      <img src="<%= crew.profile_pic %>" height="300" width="300"/>
-                  </li>
                   <li>
                       <h3>Favorite Beer:</h3>
                        <%= crew.fav_beer %>
@@ -30,19 +29,16 @@
                     <h3>About Me:</h3>
                      <%= crew.about %>
                   </li>
-              </ul>
-          </section>
-          <section>
-              <h2>Breweries Posted:</h2>
-                  <ul>
+                  <li>
+                      <h3>Breweries Posted:</h3>
+                  </li>
                       <% for (let i = 0; i < crew.breweries.length; i++) { %>
                         <li>
                             <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
                         </li>
                       <% } %>
-                  </ul>
                   <a href="/breweries/new">Add a Brewery</a>
-          </section>
+          </div>
           <section>
               <a href="/crew/<%= crew._id %>/edit">Edit Profile</a>
           </section>

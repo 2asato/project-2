@@ -8,25 +8,33 @@
           <% include ../partials/nav.ejs %>
       </nav>
       <header>
-          <h1>Add a Brewery</h1>
+          <h1 class="nav-title">Add a Brewery</h1>
       </header>
       <main>
-        <form action="/breweries" method="POST">
-          <select name="crewId">
-            <% for (let i = 0; i < crew.length; i++) { %>
-              <option value="<%= crew[i]._id %>"><%= crew[i].name %></option>
-            <% } %>
-          </select><br/>
-            Brewery Name: <input type="text" name="name"/><br/>
-            Brewery Pic: <input type="text" name="pic"/><br/>
-            Website: <input type="text" name="website"/><br/>
-            Phone #: <input type="text" name="phone"/><br/>
-            Hours: <input type="text" name="hours"/><br/>
-            Food: <input type="text" name="food"/><br/>
-            Kids Allowed: <input type="text" name="kids"/><br/>
-            Accepts CC: <input type="text" name="cc"/><br/>
-            Outdor Seating: <input type="text" name="outdoor"/><br/>
-            <input type="submit" name="" value="Add to Brewdex">
+        <div class="bootstrap-iso">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4">
+                <form action="/breweries" method="POST">
+                  <select name="crewId">
+                    <% for (let i = 0; i < crew.length; i++) { %>
+                      <option value="<%= crew[i]._id %>"><%= crew[i].name %></option>
+                    <% } %>
+                  </select><br/>
+                    Brewery Name: <input class="form-control" type="text" name="name"/><br/>
+                    Brewery Pic: <input class="form-control" type="text" name="pic"/><br/>
+                    Website: <input class="form-control" type="text" name="website"/><br/>
+                    Phone #: <input class="form-control" type="text" name="phone"/><br/>
+                    Hours: <input class="form-control" type="text" name="hours"/><br/>
+                    Food: <input class="form-control" type="text" name="food"/><br/>
+                    Kids Allowed: <input class="form-control" type="text" name="kids"/><br/>
+                    Accepts CC: <input class="form-control" type="text" name="cc"/><br/>
+                    Outdor Seating: <input class="form-control" type="text" name="outdoor"/><br/>
+                    <input type="submit" name="" value="Add to Brewdex">
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
   </body>
 </html>
