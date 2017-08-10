@@ -13,9 +13,8 @@
           <h1 class="nav-title"><%= crew.name %></h1>
       </header>
       <main>
-        <img src="<%= crew.profile_pic %>" height="300" width="300"/>
-
-          <div>
+          <div class="main-content">
+            <div class="col-sm-6">
               <ul>
                   <li>
                       <h3>Favorite Beer:</h3>
@@ -37,16 +36,26 @@
                             <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
                         </li>
                       <% } %>
-                  <a href="/breweries/new">Add a Brewery</a>
-          </div>
-          <section>
-              <a href="/crew/<%= crew._id %>/edit">Edit Profile</a>
-          </section>
-          <section>
-              <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Profile"/>
-              </form>
-          </section>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <img src="<%= crew.profile_pic %>" height="400" width="400"/>
+            </div>
       </main>
+      <div class="edit-add-delete">
+          <ul class="nav" id="nav-ul">
+              <li id="nav-li">
+                <a href="/breweries/new">Add a Brewery</a>
+              </li>
+              <li id="nav-li">
+                <a href="/crew/<%= crew._id %>/edit">Edit Profile</a>
+              </li>
+              <li id="nav-li">
+                <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
+                      <input type="submit" value="Delete Profile"/>
+                </form>
+              </li>
+          </ul>
+      </div>
   </body>
 </html>

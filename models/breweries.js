@@ -10,6 +10,7 @@ const brewerySchema = mongoose.Schema({
     kids: String,
     cc: String,
     outdoor: String,
+    comments: String,
 })
 const Breweries =mongoose.model('Breweries', brewerySchema);
 

@@ -8,24 +8,15 @@
           <% include ../partials/nav.ejs %>
       </nav>
       <header>
-          <h1><%= breweries.name %></h1>
-          <small>Posted By: <a href="/crew/<%= crew._id %>"><%= crew.name %></a></small>
-          <nav>
-              <ul>
-                  <li>
-                      <a href="/">Home</a>
-                  </li>
-                  <li>
-                      <a href="/breweries">Brewdex</a>
-                  </li>
-              </ul>
-          </nav>
+          <h1 class="nav-title"><%= breweries.name %></h1>
+          <div class="posted">
+            <small>Posted By: <a href="/crew/<%= crew._id %>"><%= crew.name %></a></small>
+          </div>
       </header>
       <main>
-          <section>
+          <div class="main-content">
+            <div class="col-sm-6">
               <ul>
-                  <li>
-                      <img src="<%= breweries.pic %>" heigth="300" width="300"/>
                   </li>
                   <li>
                       <h3>Website:</h3>
@@ -55,21 +46,31 @@
                       <h3>Outdoor Seating:</h3>
                       <%= breweries.outdoor %>
                   </li>
-              </ul>
-          </section>
-          <section>
-            <section>
-            </section>
+                  <li>
+                      <h3>Comments:</h3>
+                      <%= breweries.comments %>
+                  </li>
+            </ul>
+            </div>
 
-          </section>
-          <section>
-              <a href="/breweries/<%= breweries._id %>/edit">Edit Brewery</a>
-          </section>
-          <section>
-              <form action="/breweries/<%= breweries._id %>?_method=DELETE" method="POST">
-                    <input type="submit" value="Delete Brewery"/>
-              </form>
-          </section>
+              <div class="col-sm-6">
+                <img src="<%= breweries.pic %>" heigth="400" width="400"/>
+              </div>
+              <div class="col-sm-6">
+            </div>
+          </div>
       </main>
+      <div class="edit-add-delete">
+        <ul class="nav" id="nav-ul">
+          <li id="nav-li">
+            <a href="/breweries/<%= breweries._id %>/edit">Edit Brewery</a>
+          </li>
+          <li id="nav-li">
+            <form action="/breweries/<%= breweries._id %>?_method=DELETE" method="POST">
+                  <input type="submit" value="Delete Brewery"/>
+            </form>
+          </li>
+        </ul>
+      </div>
   </body>
 </html>

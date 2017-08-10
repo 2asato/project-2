@@ -10,18 +10,26 @@
           <% include ../partials/nav.ejs %>
       </nav>
       <header>
-          <h1>Edit Your Profile</h1>
-          <h2><%= crew.name %></h2>
+          <h1 class="nav-title">Edit Your Profile</h1>
+          <h2 class="nav-subtitle"><%= crew.name %></h2>
       </header>
       <main>
-        <form action="/crew/<%= crew._id %>?_method=PUT" method="POST">
-            User Name: <input type="text" name="name" value="<%= crew.name %>"/><br/>
-            Profile Pic: <input type="text" name="profile_pic" value="<%= crew.profile_pic %>"/><br/>
-            Favorite Beer: <input type="text" name="fav_beer" value="<%= crew.fav_beer %>"/><br/>
-            Favorite Brewery: <input type="text" name="fav_brewery" value="<%= crew.fav_brewery %>"/><br/>
-            About Me: <br/><textarea name="about"></textarea><br/>
-            <input type="submit" name="" value="Edit Profile">
-        </form>
+        <div class="bootstrap-iso">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4 col-md-offset-4">
+                <form action="/crew/<%= crew._id %>?_method=PUT" method="POST">
+                    User Name: <input class="form-control" type="text" name="name" value="<%= crew.name %>"/><br/>
+                    Profile Pic: <input class="form-control" type="text" name="profile_pic" value="<%= crew.profile_pic %>"/><br/>
+                    Favorite Beer: <input class="form-control" type="text" name="fav_beer" value="<%= crew.fav_beer %>"/><br/>
+                    Favorite Brewery: <input class="form-control" type="text" name="fav_brewery" value="<%= crew.fav_brewery %>"/><br/>
+                    About Me: <br/><textarea class="form-control" name="about"></textarea><br/>
+                    <input type="submit" name="" value="Edit Profile">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
   </body>
 </html>
