@@ -36,6 +36,10 @@
                             <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
                         </li>
                       <% } %>
+                      <li id="nav-li">
+                        <a href="/breweries/new">Add a Brewery</a>
+                      </li>
+
                 </ul>
             </div>
             <div class="col-sm-6">
@@ -44,9 +48,6 @@
       </main>
       <div class="edit-add-delete">
           <ul class="nav" id="nav-ul">
-              <li id="nav-li">
-                <a href="/breweries/new">Add a Brewery</a>
-              </li>
               <li id="nav-li">
                 <a href="/crew/<%= crew._id %>/edit">Edit Profile</a>
               </li>
