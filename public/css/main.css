@@ -21,6 +21,10 @@ ul {
   margin-top: 55px;
 }
 
+li {
+  list-style: none;
+}
+
 #nav-ul {
   display: flex;
   align-items: stretch;
@@ -50,12 +54,12 @@ ul {
   width: 100%;
 }
 
-li {
-  list-style: none;
-}
-
-a {
-
+.posted {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 2em;
+    margin: -2em;
 }
 
 .create-add {
@@ -86,7 +90,7 @@ a {
 
 .edit-add-delete {
   display: block;
-  margin-top: 40%;
+  margin-top: 0%;
 }
 
 .show-pic {
@@ -98,5 +102,25 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
-  height: 1000px;
+  height: 700px;
+}
+
+.back-pic-longer {
+  background-image: url("http://www.hetzeeuwsenieuws.nl/wp-content/uploads/2015/08/bier.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  height: 100%;
+}
+
+a {
+  color: black;
+}
+
+body {
+  font-family: 'Russo One', sans-serif;
+}
+
+.nav {
+  margin-top: 0px;
 }
