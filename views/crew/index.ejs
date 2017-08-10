@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
     <head>
         <% include ../partials/head.ejs %>
     </head>
-  </head>
   <body>
       <nav>
           <% include ../partials/nav.ejs %>
@@ -14,6 +12,7 @@
         <div class="create-add">
           <a href="/crew/new">Join the Crew</a>
         </div>
+        <div class="back-pic">
         <div class="row">
           <ul>
               <% for (let i = 0; i < crew.length; i++) { %>
@@ -25,6 +24,7 @@
                   </li>
               <% } %>
           </ul>
+        </div>
         </div>
       </main>
   </body>

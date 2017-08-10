@@ -12,6 +12,7 @@
           <h2 class="nav-subtitle"><%= breweries.name %></h2>
       </header>
       <main>
+        <div class="back-pic">
         <div class="bootstrap-iso">
           <div class="container-fluid">
             <div class="row">
@@ -26,10 +27,14 @@
                     Kids Allowed: <input class="form-control" type="text" name="kids" value="<%= breweries.kids %>"/><br/>
                     Accepts CC: <input class="form-control" type="text" name="cc" value="<%= breweries.cc %>"/><br/>
                     Outdor Seating: <input class="form-control" type="text" name="outdoor" value="<%= breweries.outdoor %>"/><br/>
+                    Comments: <br/><textarea class="form-control" name="comments"></textarea><br/>
+                    <input type="submit" name="" value="Edit Brewery">
+
               </div>
             </div>
           </div>
         </div>
+          </div>
       </main>
   </body>
 </html>
