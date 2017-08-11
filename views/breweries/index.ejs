@@ -7,12 +7,13 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
-      <h2 class="nav-title">Breweries</h2>
       <main>
-        <div class="create-add">
-          <a href="/breweries/new">Add a Brewery</a>
-        </div>
         <div class="back-pic-longer">
+          <h2 class="nav-title">Breweries</h2>
+          <div class="create-add">
+            <a href="/breweries/new">Add a Brewery</a>
+          </div>
+
         <div class="row">
           <ul>
               <% for (let i = 0; i < breweries.length; i++) { %>

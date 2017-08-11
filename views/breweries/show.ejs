@@ -7,14 +7,13 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
-      <header>
+      <main>
+        <div class="back-pic">
           <h1 class="nav-title"><%= breweries.name %></h1>
           <div class="posted">
             <small>Posted By: <a href="/crew/<%= crew._id %>"><%= crew.name %></a></small>
           </div>
-      </header>
-      <main>
-        <div class="back-pic">
+
 
           <div class="main-content">
             <div class="col-sm-6">

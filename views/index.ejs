@@ -4,9 +4,14 @@
       <% include partials/head.ejs %>
   </head>
   <body>
-    <header>
+    <%# <header>
         <nav>
+
+
             <ul class="nav" id="nav-ul">
+                <li id="nav-li">
+                    <h1>The Brewdex</h1>
+                </li>
                 <li id="nav-li">
                     <a href="/crew">Brew Crew</a>
                 </li>
@@ -15,10 +20,12 @@
                 </li>
             </ul>
         </nav>
+    </header>%>
+    <header>
+        <% include partials/nav.ejs %>
     </header>
-    <h1 class="nav-title">The Brewdex</h1>
     <div id="home-pic">
-        <img id="home-main-img" src="https://static.seattletimes.com/wp-content/uploads/2017/03/581e3cf6-0e64-11e7-aafa-d88efb65a573-780x525.jpg" alt="">
+        <img id="home-main-img" src="https://images.fineartamerica.com/images-medium-large-5/we-want-beer-unknown.jpg" alt="">
     </div>
   </body>
 </html>
