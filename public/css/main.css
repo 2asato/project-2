@@ -108,6 +108,10 @@ li {
   opacity: .9;
 }*/
 
+.crew-index-header {
+  margin: 50px;
+}
+
 .back-pic-longer {
   background-image: url("http://jvnw.com/wp-content/uploads/2013/12/50BBL_Shmaltz2.jpg");
   background-repeat: no-repeat;
