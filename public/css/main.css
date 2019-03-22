@@ -1,6 +1,11 @@
+#home-main-img {
+  display: block;
+  margin: 0 auto;
+}
+
 /*header {
   height: 200px;
-}*/
+}
 
 .nav-title {
   text-align: center;
@@ -47,10 +52,7 @@ li {
   margin-top: -6.3%;
 }
 
-#home-main-img {
-  display: block;
-  margin: 0 auto;
-}
+
 
 #index-pic {
   width: 100%;
@@ -99,7 +101,7 @@ li {
   margin-top: 60px;
 }
 
-/*.back-pic {
+.back-pic {
   background-image: url("http://jvnw.com/wp-content/uploads/2013/12/50BBL_Shmaltz2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,7 +109,7 @@ li {
   height: 700px;
   margin-top: 3.6%;
   opacity: .9;
-}*/
+}
 
 .crew-index-header {
   margin: 50px;
@@ -137,4 +139,4 @@ body {
 
 .nav {
   margin-top: 0px;
-}
+}*/
