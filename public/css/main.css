@@ -1,10 +1,15 @@
+#mainNavbar {
+  background-color: #e9ecef;
+}
+
 #home-main-img {
   display: block;
   margin: 20px auto;
 }
 
-.jumbotron {
-  height: 100vh;
+#bcRow {
+  max-width: 1000px;
+  margin: auto;
 }
 
 /*header {
