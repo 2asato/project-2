@@ -24,7 +24,9 @@
     <header>
         <% include partials/nav.ejs %>
     </header>
-    <div class="jumbotron jumbotron-fluid bg-white">
+
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <!-- <div class="row">
           <div class="col-xl-1"> -->
@@ -34,10 +36,10 @@
       </div>
     </div>
 
-    <!-- brewcrew card -->
-    <section class="container-fluid" id="cardContainer">
-      <div class="row" id="bcRow">
-        <div class="col-md-6 my-auto bcrew">
+    <!-- brewcrew -->
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 my-auto">
           <div class="card text-center border-0">
             <div class="card-header">
               Brew-Crew
@@ -45,14 +47,37 @@
             <div class="card-body">
               <h5 class="card-title">Come Join Us!</h5>
               <p class="card-text">Find crew members and see where and what beers they like to drink.</p>
-              <a href="#" class="btn btn-primary">View the crew.</a>
+              <a href="#" class="btn btn-dark">View the crew</a>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mx-auto">
-          <img class="img-fluid" src="https://sonorareview.files.wordpress.com/2013/04/speakeasy.jpg" alt="">
+        <div class="col-md-6 text-center">
+          <img class="img-fluid mx-auto" src="https://sonorareview.files.wordpress.com/2013/04/speakeasy.jpg" alt="">
         </div>
       </div>
     </section>
+
+    <!-- breweries -->
+    <section class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center order-2 order-md-1">
+          <img id="breweriesCardImg" class="img-fluid mx-auto" src="http://www.beeretseq.com/wp-content/uploads/2016/01/Billies-Bar-1936.jpg" alt="">
+        </div>
+        <div class="col-md-6 my-auto order-1 order-md-2">
+          <div class="card text-center border-0">
+            <div class="card-header">
+              Breweries
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Drink where we drink!</h5>
+              <p class="card-text">Check out our favorite places to drink.</p>
+              <a href="#" class="btn btn-dark">View breweries</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
   </body>
 </html>
