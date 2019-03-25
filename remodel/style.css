@@ -8,7 +8,7 @@ body {
   text-transform: uppercase;
 }
 
-.nav-link:hover, .indexBtn:hover {
+.nav-link:hover, .brewBtn:hover {
   background-color: #f28e1c;
   border: none;
 }
@@ -47,4 +47,17 @@ body {
 
 .fa-beer {
   color: #f28e1c;
+}
+
+#indexCrewJumbo {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+#indexCrewContainer {
+  background: url("https://www.motherjones.com/wp-content/uploads/prohibition-bar.jpg?w=990") no-repeat center center;
+  /*background-repeat: no-repeat;
+  background-position: center;*/
+  width: 100%;
+  background-size: cover;
 }
