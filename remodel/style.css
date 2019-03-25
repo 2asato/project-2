@@ -8,6 +8,11 @@ body {
   text-transform: uppercase;
 }
 
+.nav-link:hover, .indexBtn:hover {
+  background-color: #f28e1c;
+  border: none;
+}
+
 #home-main-img {
   display: block;
   margin: 20px auto 0 auto;
@@ -38,4 +43,8 @@ body {
 #footContainer {
   text-align: center;
   padding: 7px;
+}
+
+.fa-beer {
+  color: #f28e1c;
 }
