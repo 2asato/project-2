@@ -21,20 +21,20 @@
 
         <section class="container-fluid">
           <div class="row align-items-center crewRow">
-            <div class="col-md-4 col-sm-6">
               <% for (let i = 0; i < crew.length; i++) { %>
-              <div class="card mx-auto my-auto" style="width: 18rem;">
-                <img class="card-img-top" src="<%= crew[i].profile_pic %>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a></h5>
-                  <p class="card-text">Favorite Beer: <%= crew[i].fav_beer %></p>
-                </div>
-                <div class="card-body">
-                  <a href="#" class="card-link">View Profile</a>
+              <div class="col-md-4 col-sm-6">
+                <div class="card mx-auto my-auto" style="width: 18rem;">
+                  <img class="card-img-top" src="<%= crew[i].profile_pic %>" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title"><a href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a></h5>
+                    <p class="card-text">Favorite Beer: <%= crew[i].fav_beer %></p>
+                  </div>
+                  <div class="card-body">
+                    <a href="#" class="card-link">View Profile</a>
+                  </div>
                 </div>
               </div>
               <% } %>
-            </div>
           </div>
         </section>
 
