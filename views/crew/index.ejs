@@ -7,7 +7,6 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
-      <main>
         <div class="jumbotron jumbotron-fluid indexJumbo">
           <div class="card text-center">
             <h5 class="card-header bg-dark text-light"><i class="fas fa-beer"></i> Brew-Crew <i class="fas fa-beer"></i></h5>
@@ -24,7 +23,7 @@
             <% for (let i = 0; i < crew.length; i++) { %>
             <div class="col-md-4 col-sm-6">
               <div class="card mx-auto my-auto" style="width: 18rem;">
-                <img class="card-img-top" src="<%= crew[i].profile_pic %>" height="200" width="200" alt="Card image cap">
+                <img class="card-img-top" src="<%= crew[i].profile_pic %>" height="300" width="300" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"><a href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a></h5>
                   <p class="card-text">Favorite Beer: <%= crew[i].fav_beer %></p>
@@ -39,6 +38,17 @@
         </section>
 
 
-      </main>
+        <div class="row">
+          <ul>
+              <% for (let i = 0; i < crew.length; i++) {
+                  <li class="col-xs-4">
+                      <a href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a><br/>
+                      <a href="/crew/<%= crew[i]._id %>">
+                      <img src="<%= crew[i].profile_pic %>" class="img-rounded" height="200" width="200"><br/>
+                      </a>
+                  </li>
+              <% } %>
+          </ul>
+        </div>
   </body>
 </html>
