@@ -54,6 +54,10 @@ body {
   margin: 40px auto 0 auto;
 }
 
+.crewCard {
+  max-width: 80%;
+}
+
 /*header {
   height: 200px;
 }
