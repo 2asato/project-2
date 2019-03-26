@@ -58,6 +58,10 @@ body {
   max-width: 80%;
 }
 
+.crewNameView {
+  color: #f28e1c;
+}
+
 /*header {
   height: 200px;
 }
