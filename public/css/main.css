@@ -1,4 +1,4 @@
-body {
+bbody {
   background-color: #e9ecef;
   font-family: 'Josefin Slab', serif;
   font-weight: 700;
@@ -8,12 +8,12 @@ body {
   text-transform: uppercase;
 }
 
-.nav-link:hover, .indexBtn:hover {
+.nav-link:hover, .brewBtn:hover {
   background-color: #f28e1c;
   border: none;
 }
 
-#home-main-img {
+.main-imgs {
   display: block;
   margin: 20px auto 0 auto;
   width: 100%;
@@ -21,7 +21,7 @@ body {
 
 .row {
   max-width: 1000px;
-  margin: 0 auto 50px auto;
+  margin: 0 25px 50px auto;
 }
 
 .indexImg {
@@ -47,6 +47,11 @@ body {
 
 .fa-beer {
   color: #f28e1c;
+}
+
+.indexJumbo {
+  width: 80%;
+  margin: 40px auto 0 auto;
 }
 
 /*header {
