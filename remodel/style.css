@@ -13,7 +13,7 @@ body {
   border: none;
 }
 
-#home-main-img {
+.main-imgs {
   display: block;
   margin: 20px auto 0 auto;
   width: 100%;
@@ -49,15 +49,7 @@ body {
   color: #f28e1c;
 }
 
-#indexCrewJumbo {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-#indexCrewContainer {
-  background: url("https://www.motherjones.com/wp-content/uploads/prohibition-bar.jpg?w=990") no-repeat center center;
-  /*background-repeat: no-repeat;
-  background-position: center;*/
-  width: 100%;
-  background-size: cover;
+.indexJumbo {
+  width: 80%;
+  margin: 40px auto 0 auto;
 }
