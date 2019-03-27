@@ -13,13 +13,11 @@
             <div class="card mx-auto w-75" id="profileContainer">
               <img class="card-img-top" src="<%= crew.profile_pic %>" alt="Card image cap">
               <div class="card-body">
-                <h3 class="card-title text-warning"><%= crew.name %></h3>
+                <h3 class="card-title colored"><%= crew.name %></h3>
                 <p class="card-text"><%= crew.about %></p>
+                <p class="list-group-item">Favorite Beer:  <%= crew.fav_beer %></p>
+                <p class="list-group-item">Favorite Brewery:  <%= crew.fav_brewery %></p>
               </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Favorite Beer:  <%= crew.fav_beer %></li>
-                <li class="list-group-item">Favorite Brewery:  <%= crew.fav_brewery %></li>
-              </ul>
               <div class="card-body list-group-item">
                 <h6><strong>Breweries Posted: </strong></h6>
                 <ul class="fa-ul">
@@ -32,11 +30,11 @@
                 </ul>
               </div>
               <div class="card-body divForm">
-                <a href="/breweries/new" class="card-link text-warning">Add a Brewery</a>
-                <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
+                <a href="/breweries/new" class="card-link colored">Add a Brewery</a>
+                <a href="/crew/<%= crew._id %>/edit" class="card-link colored">Edit Profile</a>
                 <span>
                 <form class="card-link" action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-                  <input class="card-link delete text-warning font-weight-bold" type="submit" value="Delete Profile" />
+                  <input class="card-link delete colored font-weight-bold" type="submit" value="Delete Profile" />
                 </form>
                 </span>
               </div>

@@ -45,8 +45,12 @@ body {
   padding: 7px;
 }
 
-.fa-beer {
+.fa-beer, .colored {
   color: #f28e1c;
+}
+
+a:hover {
+  color: #ffbb33;
 }
 
 .indexJumbo {
@@ -71,9 +75,4 @@ body {
   display: flex;
   flex-direction: row;
   line-height: inherit;
-}
-
-.delete {
-  border: none;
-  margin-left: 1.25rem;
 }

@@ -46,13 +46,13 @@
       <div class="card mx-auto w-75" id="profileContainer">
         <img class="card-img-top" src="https://www.kegworks.com/wp/wp-content/uploads/2013/05/simpson-duff-beer-internet-homer.jpg" alt="Card image cap">
         <div class="card-body">
-          <h3 class="card-title text-warning">Name</h3>
+          <h3 class="card-title colored text-uppercase font-weight-bold">Name</h3>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.lorem </p>
+          <p class="">Favorite Beer: </p>
+          <p class="">Favorite Brewery: </p>
+          <a href="/crew/<%= crew._id %>/edit" class="card-link colored">Edit Profile</a>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Favorite Beer: </li>
-          <li class="list-group-item">Favorite Brewery: </li>
-        </ul>
+
         <div class="card-body list-group-item">
           <h6><strong>Breweries Posted:</strong></h6>
           <ul class="fa-ul">
@@ -60,16 +60,22 @@
             <li><span class="fa-li"><i class="fas fa-beer"></i></span>afdsf</li>
             <li><span class="fa-li"><i class="fas fa-beer"></i></span>afafads</li>
             <li><span class="fa-li"><i class="fas fa-beer"></i></span>adfadsf</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>afdfaf</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>afdsf</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>afafads</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>adfadsf</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>afdfaf</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>afdsf</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>afafads</li>
+            <li><span class="fa-li"><i class="fas fa-beer"></i></span>adfadsf</li>
+
           </ul>
+          <a href="/breweries/new" class="card-link colored">Add a Brewery</a>
         </div>
-        <div class="card-body divForm">
-          <a href="/breweries/new" class="card-link text-warning">Add a Brewery</a>
-          <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
-          <span>
+        <div class="card-body text-center">
           <form class="card-link" action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-            <input class="card-link delete text-warning font-weight-bold" type="submit" value="Delete Profile" />
+            <input class="card-link delete bg-secondary text-white font-weight-bold" type="submit" value="Delete Profile" />
           </form>
-          </span>
         </div>
       </div>
     </div>
