@@ -34,9 +34,11 @@
               <div class="card-body list-group-item">
                 <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
                 <a href="#"></a>
-                <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete Profile" class="card-link text-warning deleteBtn"/>
-                </form>
+                <a href="#" class="text-dark">
+                  <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
+                    <input type="submit" value="Delete Profile"/>
+                  </form>
+                </a>
               </div>
             </div>
       </section>
