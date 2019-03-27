@@ -24,8 +24,8 @@
                 <h6><strong>Breweries Posted: </strong></h6>
                 <ul>
                   <% for (let i = 0; i < crew.breweries.length; i++) { %>
-                  <li class="text-dark">
-                      <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
+                  <li>
+                      <a class="text-dark" href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
                   </li>
                 <% } %>
                 </ul>
