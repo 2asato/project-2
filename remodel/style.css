@@ -60,6 +60,7 @@ a:hover {
 
 .crewCard {
   max-width: 80%;
+  min-height: 285px;
 }
 
 .crewNameView {
