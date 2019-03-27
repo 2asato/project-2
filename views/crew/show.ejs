@@ -20,7 +20,7 @@
                 <li class="list-group-item">Favorite Beer:  <%= crew.fav_beer %></li>
                 <li class="list-group-item">Favorite Brewery:  <%= crew.fav_brewery %></li>
               </ul>
-              <div class="card-body">
+              <div class="card-body list-group-item">
                 <h6><strong>Breweries Posted: </strong></h6>
                 <ul class="fa-ul">
                   <% for (let i = 0; i < crew.breweries.length; i++) { %>
@@ -31,14 +31,17 @@
                 <% } %>
                 </ul>
               </div>
-              <a href="/breweries/new" class="card-link text-warning list-group-item">Add a Brewery</a>
-              <div class="card-body">
+              <div class="card-body divForm">
+                <a href="/breweries/new" class="card-link text-warning">Add a Brewery</a>
                 <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
-                <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-                  <a href="#" class="card-link text-warning"><input type="submit" value="Delete Profile" /></a>
+                <span>
+                <form class="card-link" action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
+                  <input class="card-link delete text-warning font-weight-bold" type="submit" value="Delete Profile" />
                 </form>
+                </span>
               </div>
             </div>
+          </div>
       </section>
 
 

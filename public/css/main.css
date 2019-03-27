@@ -67,9 +67,13 @@ body {
   margin-top: 100px;
 }
 
-.deleteBtn {
+.divForm {
+  display: flex;
+  flex-direction: row;
+  line-height: inherit;
+}
+
+.delete {
   border: none;
-  background-color: none;
-  font-weight: bold;
-  padding: inherit;
+  margin-left: 1.25rem;
 }
