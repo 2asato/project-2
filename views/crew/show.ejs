@@ -30,57 +30,6 @@
       </section>
 
 
-      <main>
-        <div class="back-pic">
-          <h1 class="nav-title"><%= crew.name %></h1>
-
-
-          <div class="main-content">
-            <div class="col-sm-6">
-              <ul>
-                  <li>
-                      <h3>Favorite Beer:</h3>
-                       <%= crew.fav_beer %>
-                  </li>
-                  <li>
-                      <h3>Favorite Brewery:</h3>
-                       <%= crew.fav_brewery %>
-                  </li>
-                  <li>
-                    <h3>About Me:</h3>
-                     <%= crew.about %>
-                  </li>
-                  <li>
-                      <h3>Breweries Posted:</h3>
-                  </li>
-                      <% for (let i = 0; i < crew.breweries.length; i++) { %>
-                        <li>
-                            <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
-                        </li>
-                      <% } %>
-                      <li id="nav-li">
-                        <a href="/breweries/new">Add a Brewery</a>
-                      </li>
-
-                </ul>
-            </div>
-            <div class="col-sm-6">
-                <img class="show-pic" src="<%= crew.profile_pic %>" height="400" width="400"/>
-            </div>
-            </div>
-      </main>
-      <div class="edit-add-delete">
-          <ul class="nav" id="nav-ul">
-              <li id="nav-li">
-                <a href="/crew/<%= crew._id %>/edit">Edit Profile</a>
-              </li>
-              <li id="nav-li">
-                <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-                      <input type="submit" value="Delete Profile"/>
-                </form>
-              </li>
-          </ul>
-      </div>
 
       <footer>
         <% include ../partials/footer.ejs %>
