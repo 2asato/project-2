@@ -33,8 +33,8 @@
               <a href="/breweries/new" class="card-link text-warning list-group-item">Add a Brewery</a>
               <div class="card-body">
                 <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
-                <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST" class="card-link text-warning">
-                  <input type="submit" value="Delete Profile"/>
+                <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
+                  <input type="submit" value="Delete Profile" class="card-link text-warning"/>
                 </form>
               </div>
             </div>
