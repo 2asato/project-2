@@ -11,7 +11,7 @@
       <section class="container-fluid profile">
         <div class="row">
             <div class="card mx-auto w-75" id="profileContainer">
-              <img class="card-img-top" src="https://www.kegworks.com/wp/wp-content/uploads/2013/05/simpson-duff-beer-internet-homer.jpg" alt="Card image cap">
+              <img class="card-img-top" src="<%= crew.profile_pic %>" alt="Card image cap">
               <div class="card-body">
                 <h3 class="card-title text-warning"><%= crew.name %></h3>
                 <p class="card-text"><%= crew.about %></p>
@@ -34,7 +34,7 @@
               <div class="card-body">
                 <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
                 <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete Profile" class="card-link text-warning"/>
+                  <a href="#" class="card-link text-warning"><input type="submit" value="Delete Profile" /></a>
                 </form>
               </div>
             </div>
