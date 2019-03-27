@@ -15,8 +15,9 @@
               <div class="card-body">
                 <h3 class="card-title colored"><%= crew.name %></h3>
                 <p class="card-text"><%= crew.about %></p>
-                <p class="list-group-item">Favorite Beer:  <%= crew.fav_beer %></p>
-                <p class="list-group-item">Favorite Brewery:  <%= crew.fav_brewery %></p>
+                <p>Favorite Beer:  <%= crew.fav_beer %></p>
+                <p>Favorite Brewery:  <%= crew.fav_brewery %></p>
+                <a href="/crew/<%= crew._id %>/edit" class="card-link colored">Edit Profile</a>
               </div>
               <div class="card-body list-group-item">
                 <h6><strong>Breweries Posted: </strong></h6>
@@ -28,10 +29,9 @@
                   </li>
                 <% } %>
                 </ul>
+                <a href="/breweries/new" class="card-link colored">Add a Brewery</a>
               </div>
               <div class="card-body divForm">
-                <a href="/breweries/new" class="card-link colored">Add a Brewery</a>
-                <a href="/crew/<%= crew._id %>/edit" class="card-link colored">Edit Profile</a>
                 <span>
                 <form class="card-link" action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
                   <input class="card-link delete colored font-weight-bold" type="submit" value="Delete Profile" />
