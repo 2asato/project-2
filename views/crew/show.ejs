@@ -31,11 +31,11 @@
                 </ul>
               </div>
               <div class="card-body list-group-item">
-                <a href="/breweries/new">Add a Brewery</a>
+                <a href="/breweries/new" class="card-link text-warning">Add a Brewery</a>
                 <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
                 <a href="#"></a>
                 <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete Profile"/>
+                  <input type="submit" value="Delete Profile" class="card-link text-warning"/>
                 </form>
               </div>
             </div>
