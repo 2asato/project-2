@@ -70,4 +70,6 @@ body {
 .deleteBtn {
   border: none;
   background-color: none;
+  padding: none;
+  font-weight: bold;
 }
