@@ -22,10 +22,12 @@
                 <li class="list-group-item">Breweries Posted:
                   <% for (let i = 0; i < crew.breweries.length; i++) { %>
                     <li>
-                      <a href="/breweries/<%= crew.breweries[i]._id %>"><%=
-                      crew.breweries[i].name %></a>
+                        <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
                     </li>
-                  }%>
+                  <% } %>
+                </li>
+                <li id="nav-li">
+                  <a href="/breweries/new">Add a Brewery</a>
                 </li>
               </ul>
               <div class="card-body">
