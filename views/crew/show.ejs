@@ -19,6 +19,7 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Favorite Beer:  <%= crew.fav_beer %></li>
                 <li class="list-group-item">Favorite Brewery:  <%= crew.fav_brewery %></li>
+              <div class="card-body">
                 <li class="list-group-item">Breweries Posted:
                   <% for (let i = 0; i < crew.breweries.length; i++) { %>
                     <li class="list-group-item">
@@ -26,6 +27,7 @@
                     </li>
                   <% } %>
                 </li>
+              </div>
                 <li class="list-group-item" id="nav-li">
                   <a href="/breweries/new">Add a Brewery</a>
                 </li>
@@ -36,7 +38,7 @@
                       <input type="submit" value="Delete Profile"/>
                 </form>
               </div>
-            </div>
+            </>
             </div>
       </section>
 
