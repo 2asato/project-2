@@ -21,13 +21,13 @@
                 <li class="list-group-item">Favorite Brewery:  <%= crew.fav_brewery %></li>
               </ul>
               <div class="card-body">
-                <h4>Breweries Posted:
+                <h6>Breweries Posted:
                   <% for (let i = 0; i < crew.breweries.length; i++) { %>
                     <li>
                         <a href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
                     </li>
                   <% } %>
-                </h4>
+                </h6>
               </div>
                 <li class="list-group-item" id="nav-li">
                   <a href="/breweries/new">Add a Brewery</a>
