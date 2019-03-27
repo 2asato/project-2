@@ -24,7 +24,7 @@
           <div class="row align-items-center crewRow">
             <% for (let i = 0; i < crew.length; i++) { %>
             <div class="col-md-4 col-sm-6">
-              <div class="card mx-auto mb-4 crewCard" style="width: 18rem;">
+              <div class="card h-100 mx-auto mb-4 crewCard" style="width: 18rem;">
                 <img class="card-img-top" src="<%= crew[i].profile_pic %>" height="200" width="200" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title text-uppercase"><a class="crewNameView" href="/crew/<%= crew[i]._id %>"><%= crew[i].name %></a></h5>
