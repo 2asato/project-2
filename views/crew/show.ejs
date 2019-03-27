@@ -13,20 +13,29 @@
             <div class="card mx-auto w-75" id="profileContainer">
               <img class="card-img-top" src="https://www.kegworks.com/wp/wp-content/uploads/2013/05/simpson-duff-beer-internet-homer.jpg" alt="Card image cap">
               <div class="card-body">
-                <h3 class="card-title text-warning">Name</h3>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.lorem </p>
+                <h3 class="card-title text-warning"><% crew.name %></h3>
+                <p class="card-text"><% crew.about %></p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Favorite Beer: </li>
-                <li class="list-group-item">Favorite Brewery: </li>
-                <li class="list-group-item">Breweries Posted: </li>
+                <li class="list-group-item">Favorite Beer: <% crew.fav_beer %></li>
+                <li class="list-group-item">Favorite Brewery: <% crew.fav_brewery %></li>
+                <li class="list-group-item">Breweries Posted:
+                  <% for (let i = 0; i < crew.breweries.length; i++) { %>
+                    <li>
+                      <a href="/breweries/<%= crew.breweries[i]._id %>"><%=
+                      crew.breweries[i].name %></a>
+                    </li>
+                  }
+                </li>
               </ul>
               <div class="card-body">
-                <a href="#" class="card-link text-warning">Edit Profile</a>
-                <a href="#" class="card-link text-warning">Delete Profile</a>
+                <a href="/crew/<%= crew._id %>/edit" class="card-link text-warning">Edit Profile</a>
+                <form action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
+                      <input type="submit" value="Delete Profile"/>
+                </form>
               </div>
             </div>
-          </div>
+            </div>
       </section>
 
 
