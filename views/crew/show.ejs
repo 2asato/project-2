@@ -22,9 +22,10 @@
               </ul>
               <div class="card-body">
                 <h6><strong>Breweries Posted: </strong></h6>
-                <ul>
+                <ul class="fa-ul">
                   <% for (let i = 0; i < crew.breweries.length; i++) { %>
                   <li>
+                      <span class="fa-li"><i class="fas fa-beer"></i></span>
                       <a class="text-dark" href="/breweries/<%= crew.breweries[i]._id %>"><%= crew.breweries[i].name %></a>
                   </li>
                 <% } %>
