@@ -66,3 +66,8 @@ body {
   min-height: 700px;
   margin-top: 100px;
 }
+
+.deleteBtn {
+  border: none;
+  background-color: none;
+}
