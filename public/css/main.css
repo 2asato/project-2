@@ -60,6 +60,7 @@ a:hover {
 
 .crewCard {
   max-width: 80%;
+  min-height: 285px;
 }
 
 .crewNameView {
@@ -75,4 +76,9 @@ a:hover {
   display: flex;
   flex-direction: row;
   line-height: inherit;
+}
+
+.profileImg {
+  height: 400px;
+  object-fit: contain;
 }
