@@ -7,12 +7,20 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
-      <main>
-        <div class="back-pic-longer">
-          <h2 class="nav-title">Breweries</h2>
-          <div class="create-add">
-            <a href="/breweries/new">Add a Brewery</a>
+
+      <div class="jumbotron jumbotron-fluid indexJumbo">
+        <div class="card text-center">
+          <h5 class="card-header bg-dark text-light"><i class="fas fa-beer"></i> Breweries <i class="fas fa-beer"></i></h5>
+          <div class="card-body">
+            <h5 class="card-title">Cheers!</h5>
+            <p class="card-text">Where We Like To Drink.</p>
+            <a href="/breweries/new" class="btn btn-secondary brewBtn">Add A Brewery</a>
           </div>
+        </div>
+      </div>
+
+      <main>
+
 
         <div class="row">
           <ul>
@@ -26,7 +34,6 @@
               <% } %>
           </ul>
         </div>
-          </div>
       </main>
   </body>
 </html>
