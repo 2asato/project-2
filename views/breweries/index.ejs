@@ -30,13 +30,17 @@
                 <h5 class="card-title text-uppercase"><a class="crewNameView" href="/breweries/<%= breweries[i]._id %>"><%= breweries[i].name %></a></h5>
               </div>
               <div class="card-footer">
-                <a href="/crew/<%= crew[i]._id %>" class="card-link text-uppercase text-warning">View Brewery</a>
+                <a href="/breweries/<%= breweries[i]._id %>" class="card-link text-uppercase text-warning">View Brewery</a>
               </div>
             </div>
           </div>
           <% } %>
         </div>
       </section>
-      
+
+      <footer>
+        <% include ..partials/footer.ejs %>
+      </footer>
+
   </body>
 </html>
