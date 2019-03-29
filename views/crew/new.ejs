@@ -9,27 +9,21 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
-    <main>
 
-      <div class="back-pic">
-        <h1 class="nav-title">Brew Crew Profile</h1>
-
-        <div class="bootstrap-iso">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-4 col-md-offset-4">
-                <form action="/crew" method="POST">
-                    User Name: <input class="form-control" type="text" name="name"/><br/>
-                    Profile Pic: <input class="form-control" type="text" name="profile_pic"/><br/>
-                    Favorite Beer: <input class="form-control" type="text" name="fav_beer"/><br/>
-                    Favorite Brewery: <input class="form-control" type="text" name="fav_brewery"/><br/>
-                    About Me: <br/><textarea class="form-control" name="about"></textarea><br/>
-                    <input type="submit" name="" value="Create Profile">
-              </div>
-            </div>
+      <div class="container-fluid joinContainer">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 mx-auto">
+            <h1>JOIN US</h1>
+            <form action="/crew" method="POST">
+                User Name: <input class="form-control" type="text" name="name" placeholder="Enter your user name"/><br/>
+                Profile Pic: <input class="form-control" type="text" name="profile_pic" placeholder="Enter the URL of your image"/><br/>
+                Favorite Beer: <input class="form-control" type="text" name="fav_beer" placeholder="Enter the name or type of your favorite beer"/><br/>
+                Favorite Brewery: <input class="form-control" type="text" name="fav_brewery" placeholder="Enter your favorite place to drink"/><br/>
+                About Me: <br/><textarea class="form-control" name="about" placeholder="Tell us about yourself"></textarea><br/>
+                <input class="bg-secondary text-white font-weight-bold text-center" type="submit" name="" value="Create Profile">
           </div>
         </div>
-        </div>
-      </main>
+      </div>
+      
   </body>
 </html>

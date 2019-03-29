@@ -72,6 +72,10 @@ a:hover {
   margin-top: 100px;
 }
 
+.joinContainer {
+  margin-top: 75px;
+}
+
 .divForm {
   display: flex;
   flex-direction: row;
