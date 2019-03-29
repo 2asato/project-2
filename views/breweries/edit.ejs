@@ -7,12 +7,12 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
-      
+
           <div class="container-fluid joinEditContainer">
             <div class="row">
               <div class="col-md-4 col-md-offset-4 mx-auto">
                 <h1 class="nav-title">Edit Brewery</h1>
-                <h2 class="nav-subtitle"><%= breweries.name %></h2>
+                <h2 class="nav-subtitle crewNameView"><%= breweries.name %></h2>
                 <form action="/breweries/<%= breweries._id %>?_method=PUT" method="POST">
                     Brewery Name: <input class="form-control" type="text" name="name" value="<%= breweries.name %>"/><br/>
                     Brewery Pic: <input class="form-control" type="text" name="pic" value="<%= breweries.pic %>"/><br/>
