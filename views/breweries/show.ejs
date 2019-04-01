@@ -7,74 +7,36 @@
       <nav>
           <% include ../partials/nav.ejs %>
       </nav>
-      <main>
-        <div class="back-pic">
-          <h1 class="nav-title"><%= breweries.name %></h1>
-          <div class="posted">
-            <small>Posted By: <a href="/crew/<%= crew._id %>"><%= crew.name %></a></small>
-          </div>
 
-
-          <div class="main-content">
-            <div class="col-sm-6">
-              <ul>
-                  </li>
-                  <li>
-                      <h3>Website:</h3>
-                      <a href="<%= breweries.website %>"><%= breweries.website %></a>
-                  </li>
-                  <li>
-                      <h3>Phone #:</h3>
-                      <%= breweries.phone %>
-                  </li>
-                  <li>
-                      <h3>Hours:</h3>
-                      <%= breweries.hours %>
-                  </li>
-                  <li>
-                      <h3>Food:</h3>
-                      <%= breweries.food %>
-                  </li>
-                  <li>
-                      <h3>Kids Allowed:</h3>
-                      <%= breweries.kids %>
-                  </li>
-                  <li>
-                      <h3>Accepts CC:</h3>
-                      <%= breweries.cc%>
-                  </li>
-                  <li>
-                      <h3>Outdoor Seating:</h3>
-                      <%= breweries.outdoor %>
-                  </li>
-                  <li>
-                      <h3>Comments:</h3>
-                      <%= breweries.comments %>
-                  </li>
-            </ul>
-            </div>
-
-              <div class="col-sm-6">
-                <img class="show-pic" src="<%= breweries.pic %>" heigth="400" width="400"/>
+      <section class="container-fluid profile">
+        <div class="row">
+            <div class="card mx-auto w-75" id="profileContainer">
+              <img class="card-img-top profileImg" src="<%= breweries.pic %>" alt="Card image cap">
+              <div class="card-body">
+                <h2 class="card-title colored text-uppercase font-weight-bold"><%= breweries.name %></h2>
+                <p class="card-text">Website: <a href="/breweries.website" <%= crew.website %></a></p>
+                <p>Phone #:  <%= breweries.phone %></p>
+                <p>Hours:  <%= breweries.hours %></p>
+                <p>Food: <%= breweries.food %></p>
+                <p>Kids Allowed: <%= breweries.kids %></p>
+                <p>Accepts CC: <%= breweries.cc %></p>
+                <p>Outdoor Seating: <%= breweries.outdoor %></p>
+                <p>Comments: <%= breweries.comments %></p>
+                <a href="/crew/<%= crew._id %>/edit" class="card-link colored">Edit Brewery</a>
               </div>
-              <div class="col-sm-6">
+              <div class="card-body text-center">
+                <form class="card-link" action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
+                  <input class="card-link bg-secondary text-white font-weight-bold" type="submit" value="Delete Brewery" />
+                </form>
+              </div>
             </div>
           </div>
-      </main>
-    </div>
+      </section>
 
-      <div class="edit-add-delete">
-        <ul class="nav" id="nav-ul">
-          <li id="nav-li">
-            <a href="/breweries/<%= breweries._id %>/edit">Edit Brewery</a>
-          </li>
-          <li id="nav-li">
-            <form action="/breweries/<%= breweries._id %>?_method=DELETE" method="POST">
-                  <input type="submit" value="Delete Brewery"/>
-            </form>
-          </li>
-        </ul>
-      </div>
+      <footer>
+        <% include ../partials/footer.ejs %>
+      </footer>
+
 
   </body>
 </html>
