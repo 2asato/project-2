@@ -14,7 +14,7 @@
               <img class="card-img-top profileImg" src="<%= breweries.pic %>" alt="Card image cap">
               <div class="card-body">
                 <h2 class="card-title colored text-uppercase font-weight-bold"><%= breweries.name %></h2>
-                <p class="card-text">Website: </p> <a href="<%= /breweries.website %>"> <%= breweries.website %></a>
+                <p class="card-text">Website: </p> <a href="<%= breweries.website %>"> <%= breweries.website %></a>
                 <p>Phone #:  <%= breweries.phone %></p>
                 <p>Hours:  <%= breweries.hours %></p>
                 <p>Food: <%= breweries.food %></p>
@@ -22,10 +22,10 @@
                 <p>Accepts CC: <%= breweries.cc %></p>
                 <p>Outdoor Seating: <%= breweries.outdoor %></p>
                 <p>Comments: <%= breweries.comments %></p>
-                <a href="/crew/<%= crew._id %>/edit" class="card-link colored">Edit Brewery</a>
+                <a href="/breweries/<%= breweries._id %>/edit" class="card-link colored">Edit Brewery</a>
               </div>
               <div class="card-body text-center">
-                <form class="card-link" action="/crew/<%= crew._id %>?_method=DELETE" method="POST">
+                <form class="card-link" action="/breweries/<%= breweries._id %>?_method=DELETE" method="POST">
                   <input class="card-link bg-secondary text-white font-weight-bold" type="submit" value="Delete Brewery" />
                 </form>
               </div>
